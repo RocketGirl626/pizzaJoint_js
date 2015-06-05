@@ -14,19 +14,10 @@ $(document).ready(function(){
     event.preventDefault();
 
     var  quantity= parseInt($('input[name="qty-choices"]:checked').val());
-
     var size = parseFloat($('input[name="size-choices"]:checked').val());
-
     var toppings = parseFloat($('input[name="top-choices"]:checked').val());
-
     var newPizza = new Pizza(quantity, size, toppings);
-
     var totalPrice = newPizza.pizzaPrice(quantity, size, toppings);
-console.log(newPizza);
-console.log(totalPrice);
-// alert(quantity);
-// alert(size);
-// alert(toppings);
 
     $(".pizza-price").append("<span>" + totalPrice + "</span>");
 

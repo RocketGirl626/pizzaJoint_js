@@ -11,6 +11,11 @@ h2 {
   align:left;
 }
 
+h3 {
+  font-size:18px;
+  color:white;
+}
+
 body {
   background-color:darkgreen;
   padding-top:20px;
