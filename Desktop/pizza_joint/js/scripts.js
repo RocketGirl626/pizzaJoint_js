@@ -5,21 +5,7 @@ function Pizza(qty, size, toppings) {
 }
 
 Pizza.prototype.pizzaPrice= function(quantity, size, toppings) {
-
-  if(size === 'small') {
-    var basePrice = 12;
-  }
-  if(size === 'medium') {
-    var basePrice = 14;
-  }
-  if(size ==='large') {
-    var basePrice = 16;
-  }
-
-  var numOfToppings = toppings.length;
-  var toppingsPrice = numOfToppings * 2;
-  var totalPrice = quantity * (basePrice + numOfToppings);
-
+  var totalPrice = quantity * (size + toppings);
   return totalPrice;
 }
 
@@ -27,15 +13,22 @@ $(document).ready(function(){
   $("form#pizza-info").submit(function(event){
     event.preventDefault();
 
-    var  quantity= $('input[name="qty-choices"]:checked').val();
+    var  quantity= parseInt($('input[name="qty-choices"]:checked').val());
 
-    var size = $('input[name="size-choices"]:checked').val();
+    var size = parseFloat($('input[name="size-choices"]:checked').val());
 
-    var toppings = $('input[name="top-choices"]:checked').val();
+    var toppings = parseFloat($('input[name="top-choices"]:checked').val());
 
-    var newPizza = new (quantity, size, toppings);
+    var newPizza = new Pizza(quantity, size, toppings);
 
-    $(".pizza-info").append("<span>" + newPizza.pizzaPrice(quantity, size, toppings) + "</span>");
+    var totalPrice = newPizza.pizzaPrice(quantity, size, toppings);
+console.log(newPizza);
+console.log(totalPrice);
+// alert(quantity);
+// alert(size);
+// alert(toppings);
+
+    $(".pizza-info").append("<span>" + newPizza.size + "</span>");
   });
 
 });
