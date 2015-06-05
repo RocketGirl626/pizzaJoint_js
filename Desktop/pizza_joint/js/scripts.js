@@ -28,7 +28,11 @@ console.log(totalPrice);
 // alert(size);
 // alert(toppings);
 
-    $(".pizza-info").append("<span>" + newPizza.size + "</span>");
-  });
+    $(".pizza-price").append("<span>" + totalPrice + "</span>");
 
+    $("#clear-account").click(function(event) {
+      event.preventDefault();
+      document.location.reload(true);
+    });
+  });
 });
