@@ -5,72 +5,62 @@
   <link href="css/styles.css" rel="stylesheet" type="text/css">
   <script src="js/jquery-1.11.3.js"></script>
   <script src="js/scripts.js"></script>
-  <title>Movie Tickets</title>
+  <title>PizzaJointPDX</title>
 </head>
 <body>
   <div class="container">
     <div class="header">
-      <h1>Movie Tickets</h1>
-      <h2>Buy a movie ticket:</h2>
+      <h1>PizzaJointPDX</h1>
+      <h2>Design Your Pizza:</h2>
     </div>
     <div class="row create-account-section">
       <div class="col-md-8-offset-2">
-        <form id="new-movie">
+        <form id="pizza-info">
           <div class="form-group">
-            <label for="movie-one">The Frog</label>
-            <input type="radio" class="movie-one" name="movie-choices" value="The Frog">
+            <label for="qty-one">One Pizza</label>
+            <input type="radio" class="qty-one" name="qty-choices" value=1>
           </div>
           <div class="form-group">
-            <label for="movie-two">Scary John</label>
-            <input type="radio" class="movie-two" name="movie-choices" value="Scary John">
+            <label for="qty-two">Two Pizzas</label>
+            <input type="radio" class="qty-two" name="qty-choices" value=2>
           </div>
           <div class="form-group">
-            <label for="movie-three">Joss The Boss</label>
-            <input type="radio" class="movie-three" name="movie-choices" value="Joss The Boss">
-          </div>
-          <div class="form-group">
-            <label for="movie-four">Jeanette Loves Coffee</label>
-            <input type="radio" class="movie-four" name="movie-choices" value="Jeanette Loves Coffee">
+            <label for="qty-three">Three Pizzas</label>
+            <input type="radio" class="qty-3" name="qty-choices" value=3>
           </div>
 
-
-
-
-          <div class="form-group">
-            <label for="time-one"> 11:00 am</label>
-            <input type="radio" class="time-one" name="time-choices" value="1100">
-          </div>
-          <div class="form-group">
-            <label for="time-two">2:00 pm</label>
-            <input type="radio" class="time-two" name="time-choices" value="1400">
-          </div>
-          <div class="form-group">
-            <label for="time-three">4:00 pm</label>
-            <input type="radio" class="time-three" name="time-choices" value="1600">
-          </div>
-          <div class="form-group">
-            <label for="time-four">6:00 pm</label>
-            <input type="radio" class="time-four" name="time-choices"  value="1800">
-          </div>
-
+          <br /><br /><br />
 
           <div class="form-group">
-            <label for="ages">Enter your age: </label>
-            <input type="text" class="ages" name="age-choices">
-          </div>
-
-
-          <div class="form-group">
-            <label for="new-release">New Release</label>
-            <input type="radio" class="new-release" name="movie-type" value=true>
+            <label for="size-sm">Small Pizza</label>
+            <input type="radio" class="size-sm" name="size-choices" value=12.00>
           </div>
           <div class="form-group">
-            <label for="old-movie">Bargain Movie</label>
-            <input type="radio" class="new-release" name="movie-type" value=false>
+            <label for="size-med">Medium</label>
+            <input type="radio" class="size-med" name="size-choices" value=14.00>
           </div>
-          <button type="submit" class="btn btn-info submit-info">Submit Info</button>
+          <div class="form-group">
+            <label for="size-lg">Large Pizza</label>
+            <input type="radio" class="size-lg" name="size-choices" value=16.00>
+          </div>
+
+          <br /><br /><br />
+
+          <div class="form-group">
+            <label for="top-one">Sausage</label>
+            <input type="checkbox" class="top-one" name="top-choices" value="2.00">
+          </div>
+          <div class="form-group">
+            <label for="top-two">Mushrooms</label>
+            <input type="checkbox" class="top-two" name="top-choices" value="2.00">
+          </div>
+          <div class="form-group">
+            <label for="time-three">Olives</label>
+            <input type="checkbox" class="time-three" name="top-choices" value="2.00">
+          </div>
+
+          <button type="submit" class="btn btn-info submit-warning">Order Pizza</button>
         </form>
-
       </div>
     </div>
     <div class="row account-info-section">
@@ -78,7 +68,7 @@
         <div id="show-account-info">
           <h2></h2>
 
-          <p>Movie Name: <span class="movie-name"></span></p>
+          <p>Number of Pizzas: <span class="movie-name"></span></p>
           <p>Movie Times : <span class="ticket-price"></span></p>
           <p>Age: <span class="ticket-price"></span></p>
           <p>Ticket Price: <span class="ticket-price"></span></p>

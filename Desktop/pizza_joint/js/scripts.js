@@ -4,7 +4,7 @@ function Pizza(qty, size, toppings) {
   this.toppings = toppings;
 }
 
-Pizza.prototype.pizzaCost= function(quantity, size, toppings) {
+Pizza.prototype.pizzaPrice= function(quantity, size, toppings) {
 
   if(size === 'small') {
     var basePrice = 12;
@@ -18,8 +18,24 @@ Pizza.prototype.pizzaCost= function(quantity, size, toppings) {
 
   var numOfToppings = toppings.length;
   var toppingsPrice = numOfToppings * 2;
-  var pizzaTotalCost = quantity * (basePrice + numOfToppings);
+  var totalPrice = quantity * (basePrice + numOfToppings);
 
-  return pizzaTotalCost;
+  return totalPrice;
 }
-+
+
+$(document).ready(function(){
+  $("form#pizza-info").submit(function(event){
+    event.preventDefault();
+
+    var  quantity= $('input[name="qty-choices"]:checked').val();
+
+    var size = $('input[name="size-choices"]:checked').val();
+
+    var toppings = $('input[name="top-choices"]:checked').val();
+
+    var newPizza = new (quantity, size, toppings);
+
+    $(".pizza-info").append("<span>" + newPizza.pizzaPrice(quantity, size, toppings) + "</span>");
+  });
+
+});

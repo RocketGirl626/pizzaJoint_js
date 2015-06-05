@@ -1,11 +1,18 @@
-h1, h2 {
+h1 {
   text-align: center;
   font-size:28px;
+  color:white;
 
 }
 
+h2 {
+  font-size:18px;
+  color:white;
+  align:left;
+}
+
 .header {
-  background-color: lightgrey;
+  background-color: red;
   border-radius: 5px;
   width: 100%;
   padding-top: 5px;
@@ -15,20 +22,24 @@ h1, h2 {
 }
 
 .create-account-section {
-  background-color: lightgrey;
+  background-color: red;
   border-radius: 5px;
   width: 100%;
   padding-top: 5px;
   padding-bottom: 10px;
   padding-left:25px;
   margin-top:20px;
+  color:white;
+  font-size:12px;
 }
 
 .create-account-section {
   margin: auto;
   margin-top: 30px;
 
+
 }
+
 form {
   margin-bottom: 10px;
 }
